@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><!--TAG HTML-->
+    <!-- COMMENTS!! 
+    HTML 
+        HyperText 
+            texts that accept links
+
+        Markup
+            tagging
+        
+        Language
+            Is not a progrmming language 
+    -->
+    <head>
+        <!-- Responsible for receiving page configurations -->
+        <meta charset="UTF-8">
+        
+        <title>Creative House</title>
+
+        <!-- .<name> idetifies a class, # identifies an id-->
+        <style>
+            /*
+            CSS
+
+            Cascading StyleSheet
+
+            */
+
+            body{
+                color: #ff5E84;
+                background:#e5e5e5;
+                color: #25282B;   
+
+                text-align: center;
+            }
+            body img{
+
+            } 
+            button{
+                border: none;
+                font-weight: bold;
+                background: none;
+            }
+            button.fat{ 
+                color: white;
+                background: #ff5E84;
+             }
+            #footer a{
+                color: #25252B;
+                text-decoration: underline;
+            }
+            .hide{
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Creative House</h1>
+         <img src="logo_dia1.png" alt="Imagem Logo Marca">
+         <p>    Ficar em casa em períodos longos, não deve ser nada fácil.</p>
+
+         <p>    Por isso, iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong>  e tudo que for necessário para tornar esse momento mais interessante.</p>
+         
+         <p> 
+                Comece clicando em ver ideias para ver as  ideias cadastradas e contribua adicioando a sua ideia.</p>
+        <button>+ Adicionar Ideia</button>
+        <button class="fat">Ver Ideias</button>
+
+        <p id="footer">Com ❤ <a href="http://rocketseat.com.br">Rocketseat</a></p>
+        
+        <script>
+            document
+                .querySelector("button.fat")
+                .addEventListener("click",function(){
+                    document
+                        .querySelector("#footer")
+                        .classList
+                        .toggle("hide")
+                })
+        </script>
+    </body>
+</html>
