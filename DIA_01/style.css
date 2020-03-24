@@ -1,0 +1,297 @@
+/*
+CSS
+
+Cascading StyleSheet
+
+The basic element of CSS is the BOX
+inside of a box we can have another box, texts or images
+BOX > box or text or image
+
+width
+Spacing
+Fill
+Edges
+Positioning
+
+*/
+
+body{
+
+    background:#e5e5e5;
+    color: #25282B;   
+
+    font-family: 'Montserrat', sans-serif;
+    
+    margin: 0;
+}
+
+.hide{
+    display: none;
+}
+
+a{
+    color: #ff5E84;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* with ',' it is possible to group elements properties*/
+p, .description{
+    font-size:  16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+#container{
+    /*Text inside this box will not pass a limit of 90% of the width*/
+    width: 80%;
+    /*Const value independet od the size of the display*/
+    max-width: 980px;
+    /*Set the margin according to the size of the window*/
+    margin: 40px auto;/*(top bottom) = 40px (left right) = auto*/
+    /* Aplyed to the children of the box "container" */
+    /* Put the children element in a line one after other*/
+    display: flex;
+
+}
+
+#intro{
+    width: 300px;
+    margin-right: 20px; /* space between intro text and ideas*/
+}
+
+main{
+    /*The parameters of the margin property follow clockwise */
+    /*Top Right Bottom Left*/
+    /*(top,bottom) (left,right)*/
+    /*top (left right) bottom*/
+    /*(all four)*/
+    margin: 32px 0; 
+    /*With two arguments we have: (top bottom) = 32 (left right) = 0*/
+}
+
+#buttons{
+    /* # represent an id */
+    display: flex;
+    /* Defines the spacing between the elements*/
+    margin-bottom: 32px;
+    justify-content: space-evenly;/* Put spaces between elements*/
+
+}
+
+button{
+    background: none;
+    color: #ff5E84;
+    border: none;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;/*The cursor indicates that is a clickable item when pass above the button*/
+    outline: none;  /*Don't outline the button when it is clicked*/
+    /*Works better in chrome web browser */
+
+}
+
+button:hover{
+    /* Mouse above the item*/
+    text-decoration: underline;
+}
+
+button.fat{ 
+    color: white;
+    background: #ff5E84;
+    width: 150px;
+    height: 40px;
+
+    /*rounds the edges*/
+    border-radius: 6px;
+    box-shadow: #ff5E8432; /*x axis and y axis blore color*/
+}
+
+button.fat:hover{
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    color: #777;
+}
+
+footer a{
+    opacity: 0.7;
+}
+.idea{
+    /* '.' represent a class*/
+    display: flex;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+    padding: 32px;
+    margin-bottom: 32px;    
+}
+
+.idea img{
+    width: 60px;
+    height: 60px;   
+
+    margin-right: 32px;
+}
+
+.idea h3{
+    margin: 0;
+}
+
+.idea p{
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description{
+    margin: 16px 0;
+}
+
+/*--------MODAL---------*/
+
+#modal{
+    background: #ff5E84;
+
+    position: absolute; /* all the picture */
+    top : 0;            /*upper left corner*/
+    width: 100vw; /*viewportwidth all the viseable field of your computer screen*/
+    height: 100vh; /*viewportheight*/
+
+    display: flex;
+    /*align-items: center; Y */
+    justify-content: center;/* X */
+
+    transition: 400ms;/*Set the time to occur a transition*/
+
+}
+
+#modal .content{
+    margin-top: 128px;
+
+    color: white;
+}
+
+#modal .content h1{
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+#modal form{
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    grid-column: span 2; /*spand the nth childrens to the 2nd collunm*/
+}
+
+form input,
+form textarea{
+    width: 100%;
+
+    padding: 12px;
+    box-sizing: border-box;
+
+    border-radius: 6px;
+    border: 1px solid rgba(141, 25, 52, 0.5);
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a{
+    width: 150px;
+    height: 40px;
+
+    background-color: #ffffff22;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    align-self: end;
+
+    transition: 400ms;
+
+}
+
+form a:hover{
+    background: #fff;
+    color: #ff5E84;
+    
+    text-decoration: none;
+
+}
+
+form button{
+    background: white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+    margin-top: 32px;
+
+    grid-column: 2;/*place the element in the 2nd colunm*/
+    justify-self: end;
+
+    transition: 400ms;
+}
+
+form button:hover{
+    background-color: #0984e3;
+    color: white;
+    text-decoration: none;
+}
+
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+
+
