@@ -12,8 +12,11 @@ Spacing
 Fill
 Edges
 Positioning
+colors, fonts
 
 */
+
+/*  GLOBAL   */
 
 body{
 
@@ -23,6 +26,14 @@ body{
     font-family: 'Montserrat', sans-serif;
     
     margin: 0;
+}
+
+body.hideScroll{
+    overflow: hidden;
+    /*The CSS overflow property controls what happens to content 
+    that is too big to fit into an area.
+    hidden - The overflow is clipped, and the rest of the content will be invisible
+    */
 }
 
 .hide{
@@ -47,6 +58,31 @@ p, .description{
     letter-spacing: 0.1px;
 }
 
+.button{ 
+    color: white;
+    background: #ff5E84;
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;/*Y axis*/
+    justify-content: center;/*X axis*/
+
+    /*rounds the edges*/
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px #ff5E8432; /*x axis and y axis blore color*/
+}
+
+.button:hover{
+    background-color: #0984e3;
+    text-decoration: none;
+}
+
+/*  STANDARD */
+
 #container{
     /*Text inside this box will not pass a limit of 90% of the width*/
     width: 80%;
@@ -62,7 +98,7 @@ p, .description{
 
 #intro{
     width: 300px;
-    margin-right: 20px; /* space between intro text and ideas*/
+    margin-right: 64px; /* space between intro text and ideas*/
 }
 
 main{
@@ -103,21 +139,6 @@ button{
 button:hover{
     /* Mouse above the item*/
     text-decoration: underline;
-}
-
-button.fat{ 
-    color: white;
-    background: #ff5E84;
-    width: 150px;
-    height: 40px;
-
-    /*rounds the edges*/
-    border-radius: 6px;
-    box-shadow: #ff5E8432; /*x axis and y axis blore color*/
-}
-
-button.fat:hover{
-    text-decoration: none;
 }
 
 footer{
@@ -171,19 +192,27 @@ footer a{
 
     position: absolute; /* all the picture */
     top : 0;            /*upper left corner*/
-    width: 100vw; /*viewportwidth all the viseable field of your computer screen*/
-    height: 100vh; /*viewportheight*/
+    bottom: 0;
+    right: 0;
+    left: 0;
+   
+   /* width: 100vw; /*viewportwidth all the viseable field of your computer screen*/
+   /* height: 100vh; /*viewportheight*/
 
     display: flex;
-    /*align-items: center; Y */
-    justify-content: center;/* X */
+    /*align-items: center; Y axis*/
+    justify-content: center;/* X axis*/
 
     transition: 400ms;/*Set the time to occur a transition*/
 
 }
 
+#modal.addScroll{
+    overflow: auto;
+}
+
 #modal .content{
-    margin-top: 128px;
+    margin-top: 15%;
 
     color: white;
 }
@@ -198,7 +227,7 @@ footer a{
     width: 80%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 15%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -293,5 +322,71 @@ form button:hover{
 
 }
 
+/*      IDEAS.HTML      */
 
+#page-ideas #container{
+    display: block;
+}
 
+#page-ideas header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#page-ideas nav{
+    display: flex; /* this positions the elements next to each other */
+    align-items: center; /* Y axis */
+
+}
+
+#page-ideas nav li{
+    list-style-type: none;
+    margin-right: 16px; /* places a space between the navigation items*/
+}
+
+#page-ideas nav li a{
+    color: #25282B;
+} 
+
+#page-ideas nav li a.button{
+    color: white;
+}
+
+#page-ideas nav li:last-child {
+    /* this properties are only applied over the last element of the navigation items*/
+    margin: 0;    
+}
+
+section#title{
+    text-align: center;
+
+}
+
+section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1{
+    margin: 0;
+
+    font-size: 28px;
+}
+
+section#ideas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;/* make as a table, 1fr - one fraction*/
+
+    gap : 20px;
+}
+
+section#ideas .idea{
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer{
+    margin-top: 64px;
+}

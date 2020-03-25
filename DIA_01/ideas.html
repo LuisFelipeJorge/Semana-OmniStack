@@ -1,68 +1,42 @@
 <!DOCTYPE html>
-<html><!--TAG HTML-->
-    <!-- COMMENTS!! 
-    HTML 
-        HyperText 
-            texts that accept links
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideias Casa-Criativa</title>
 
-        Markup
-            tagging
-        
-        Language
-            Is not a progrmming language 
-    -->
-    <head>
-        <!-- Responsible for receiving page configurations -->
-        <meta charset="UTF-8">
-        
-        <title>Creative House</title>
+    <link rel="stylesheet" href="style.css">
+    <link 
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" 
+        rel="stylesheet"> <!-- Link from google fonts-->
 
-        <!-- .<name> idetifies a class, # identifies an id-->
-        <link rel="stylesheet" href="style.css">
-        <link 
-            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" 
-            rel="stylesheet"> <!-- Link from google fonts-->
-    </head>
-    <body>
+</head>
+<body id="page-ideas">
 
-        <div id="container"> <!--BOX division-->
+    <div id="container">
 
-            <section id="intro">
-
-                <header>
-                    <a href="index.html">
-                        <img src="logo_dia1.png" alt="Imagem Logo Marca">
-                    </a>
-                </header>
-
-                <main>
-                    <p>    Ficar em casa em períodos longos, não deve ser nada fácil.</p>
-       
-                    <p>    Por isso, iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong>  e tudo que for necessário para tornar esse momento mais interessante.</p>
-                    
-                    <p> 
-                           Comece clicando em ver ideias para ver as  ideias cadastradas e contribua adicioando a sua ideia.</p>
+        <header>
+            <a href="index.html">
+                <img src="logo_dia1.png" alt="Imagem Logo Marca">
+            </a>
+            <nav><!-- Navigation Tag-->
+                <!-- quick comand : li*3>a  makes 3 list itens with a reference structure inside-->
+                <li><a href="index.html">Início</a></li>
+                <li><a class="button" href="#" onclick="onOff()">Nova Ideia</a></li>
+            </nav>
+        </header>
     
-                </main>
-
-                <section id="buttons">
-
-                    <button onclick="onOff()">+ Adicionar Ideia</button>
-                    <a href="ideas.html" class="button">Ver Ideias</a>
-     
-                </section>
-       
-               <footer>
-
-                   Com ❤ <a href="http://rocketseat.com.br" target="_blank">Rocketseat</a>
-                   <!-- target blak open a new window when the link is clicked-->
-               
-                </footer>
-         
-            </section>
-
-            <section id="last-ideas">
-
+    
+        <section id="title">
+            
+            <p>em exibição</p>
+            <h1>Ideias</h1>
+        
+        </section>
+        <main>
+    
+            <section id="ideas">
+    
                 <div class="idea">
                     
                     <img 
@@ -70,71 +44,101 @@
                         alt="stay at home programming">
                   
                     <div class="content">
-
+    
                         <h3>Cursos de Progrmação</h3>
                         <p>Estudo</p>
-
+    
                         <div class="description">
-
+    
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit maiores odit animi nulla. Pariatur accusantium sequi ab similique est, impedit at quos, quibusdam beatae quam eum nisi, dolorum accusamus?
-
+    
                         </div>
-
+    
                         <a href="#">Ir para a ideia</a>
                     
                     </div>
-
+    
                 </div>
-
+    
                 <div class="idea">
-
+    
                     <img 
                         src="https://image.flaticon.com/icons/svg/2729/2729005.svg" 
                         alt="stay at home exercising">
-
+    
                     <div class="content">
-
+    
                         <h3>Exercícios</h3>
                         <p>Saúde</p>
-
+    
                         <div class="description">
-
+    
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit maiores odit animi nulla. Pariatur accusantium sequi ab similique est, impedit at quos, quibusdam beatae quam eum nisi, dolorum accusamus?
-
+    
                         </div>
-
+    
                         <a href="#">Ir para a ideia</a>
-
+    
                     </div>
-
+    
                 </div>
-
+    
                 <div class="idea">
-
+    
                     <img 
                         src="https://image.flaticon.com/icons/svg/2729/2729069.svg" 
                         alt="stay at home meditating">
-
+    
                     <div class="content">
-
+    
                         <h3>Meditação</h3>
                         <p>Mentalidade</p>
-
+    
                         <div class="description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit maiores odit animi nulla. Pariatur accusantium sequi ab similique est, impedit at quos, quibusdam beatae quam eum nisi, dolorum accusamus?
-
+    
                         </div>
-
+    
                         <a href="#">Ir para a ideia</a>
-
+    
                     </div>
-
+    
                 </div>
 
-
+                <div class="idea">
+    
+                    <img 
+                        src="https://image.flaticon.com/icons/svg/2729/2729032.svg" 
+                        alt="stay at home singing">
+    
+                    <div class="content">
+    
+                        <h3>Karaôke</h3>
+                        <p>Diversão em Família</p>
+    
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit maiores odit animi nulla. Pariatur accusantium sequi ab similique est, impedit at quos, quibusdam beatae quam eum nisi, dolorum accusamus?
+    
+                        </div>
+    
+                        <a href="#">Ir para a ideia</a>
+    
+                    </div>
+    
+                </div>
+    
+    
             </section>
+    
+        </main>
+        <footer>
+    
+            Com ❤ <a href="http://rocketseat.com.br" target="_blank">Rocketseat</a>
+        
+         </footer>
 
-        </div>
+    </div>
+
 
         <!-- Modal or POP UP-->
 
@@ -190,5 +194,5 @@
         </div>
 
         <script src="scripts.js"></script>
-    </body>
+</body>
 </html>
