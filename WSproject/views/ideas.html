@@ -1,0 +1,48 @@
+{% extends "layout.html" %} <!-- AN extension of the layout.html file -->
+
+{% set bodyId = "page-ideas"%} <!-- In layout page, this sets the object {{bodyId}} as "page-ideas"-->
+
+
+{%block title%} <!-- tittle of this page, this replace the general title present in layout -->
+    <title>Ideias Casa-Criativa</title>
+{%endblock title %}
+
+{% block content %} <!-- The content of this block is placed in the block content of the layout page -->
+
+    <header>
+        <a href="/">
+            <img src="/logo_dia1.png" alt="Imagem Logo Marca">
+        </a>
+        <nav><!-- Navigation Tag-->
+            <!-- quick comand : li*3>a  makes 3 list itens with a reference structure inside-->
+            <li><a href="/">Início</a></li>
+            <li><a class="button" href="#" onclick="onOff()">Nova Ideia</a></li>
+        </nav>
+    </header>
+
+
+    <section id="title">
+        
+        <p>em exibição</p>
+        <h1>Ideias</h1>
+
+    </section>
+    <main>
+
+        <section id="ideas">
+
+            {% include "all_ideas.html" %}    <!-- Include the html file -->
+
+        </section>
+
+    </main>
+    <footer>
+
+        Com ❤ <a href="http://rocketseat.com.br" target="_blank">Rocketseat</a>
+
+    </footer>
+
+
+{%endblock%}
+
+        
